@@ -49,15 +49,26 @@ function increment() {
 }
 
 function decrement() {
-    count -= 1;
-    countEl.innerText = count;
+    
+    if (count === 0) {
+        countEl.innerText = 0
+    }
+    else {
+        count -= 1;
+        countEl.innerText = count;
+    }
 }
 
 function save() {
-    let countStr = count + " - "
-    saveEl.textContent += countStr
-    countEl.textContent = 0
-    count = 0
+    if (count === 0) {
+        saveEl.textContent
+    }
+    else {
+        let countStr = count + " - "
+        saveEl.textContent += countStr
+        countEl.textContent = 0
+        count = 0
+    }
 }
 
 
